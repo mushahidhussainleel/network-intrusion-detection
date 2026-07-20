@@ -27,3 +27,5 @@ backend/data/processed/
 .DS_Store
 Thumbs.db
 
+# Streamlit
+.streamlit/secrets.tomlcd
