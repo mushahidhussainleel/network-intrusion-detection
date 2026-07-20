@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="backend/images/banner.png" alt="Network Intrusion Detection System Banner" width="100%"/>
+<img src="frontend/assets/banner.png" alt="Network Intrusion Detection System Banner" width="100%"/>
 
 # 🛡️ Network Intrusion Detection System
 
@@ -106,6 +106,7 @@ network-intrusion-detection/
 │   └── assets/
 │       └── banner.png                 # Project banner
 │
+├── .gitignore
 └── README.md
 ```
 
@@ -349,15 +350,26 @@ Frontend runs at: `http://localhost:8501`
 
 ## 📸 Screenshots
 
-### Streamlit Frontend
-> Interactive UI with 41 input features, real-time prediction, and color-coded threat results
+### 🌐 Live Frontend
+> 👉 [View Live Demo](https://network-intrusion-detection-8wqjguchviqbu6p8iiwwfv.streamlit.app/)
 
-### FastAPI Swagger UI
-> Full API documentation with try-it-out functionality at `/docs`
+### ⚡ FastAPI Swagger UI
+> 👉 [View API Docs](https://network-intrusion-detection-zlmu.onrender.com/docs)
 
-### EDA Visualizations
-> Class distribution, outlier analysis, feature distributions, and correlation heatmap
+### 📊 Class Distribution
+![Class Distribution](backend/images/class_distribution.png)
 
+### 📈 Feature Distributions
+![Feature Distributions](backend/images/feature_distributions.png)
+
+### 🔗 Correlation Heatmap
+![Correlation Heatmap](backend/images/correlation_heatmap_key.png)
+
+### 📦 Categorical Features
+![Categorical Distribution](backend/images/categorical_distribution.png)
+
+### 🔍 Outlier Analysis
+![Outlier Analysis](backend/images/outliers_boxplot.png)
 ---
 
 ## 👨‍💻 Developer
