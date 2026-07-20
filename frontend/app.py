@@ -11,6 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
 # API URL
 API_URL = "https://network-intrusion-detection-zlmu.onrender.com"
 
