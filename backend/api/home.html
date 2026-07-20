@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Intrusion Detection System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 700px; width: 100%; text-align: center; }
+        .icon { font-size: 60px; margin-bottom: 15px; }
+        h1 {
+            font-size: 1.9em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .subtitle { color: #94a3b8; font-size: 1em; margin-bottom: 30px; }
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(30,41,59,0.8);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(56,189,248,0.2);
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+        .dot {
+            width: 8px; height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: rgba(30,41,59,0.6);
+            border: 1px solid rgba(56,189,248,0.15);
+            border-radius: 14px;
+            padding: 20px;
+        }
+        .card-icon { font-size: 1.8em; margin-bottom: 8px; }
+        .card-title { font-size: 0.95em; font-weight: 600; color: #38bdf8; margin-bottom: 5px; }
+        .card-desc { font-size: 0.85em; color: #94a3b8; }
+        .endpoint {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(15,23,42,0.6);
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        .method {
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 5px;
+            min-width: 55px;
+            text-align: center;
+        }
+        .get { background: #3b82f6; color: white; }
+        .post { background: #10b981; color: white; }
+        .path { font-family: monospace; font-size: 0.9em; color: #94a3b8; }
+        .path-desc { font-size: 0.82em; color: #475569; margin-left: auto; }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: white;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(2,132,199,0.4); }
+        .btn-secondary {
+            background: rgba(30,41,59,0.8);
+            color: #38bdf8;
+            border: 1px solid rgba(56,189,248,0.3);
+        }
+        .btn-secondary:hover { transform: translateY(-3px); }
+        .footer { margin-top: 30px; color: #475569; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🛡️</div>
+        <h1>Network Intrusion Detection System</h1>
+        <p class="subtitle">AI-powered network traffic classifier — XGBoost | NSL-KDD Dataset</p>
+
+        <div class="status">
+            <div class="dot"></div>
+            <span>API Live</span>
+            <span style="color:#475569">|</span>
+            <span>v1.0.0</span>
+            <span style="color:#475569">|</span>
+            <span>⚡ FastAPI</span>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <div class="card-title">ML Model</div>
+                <div class="card-desc">XGBoost Classifier trained on 125,973 network traffic samples</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <div class="card-title">5-Class Detection</div>
+                <div class="card-desc">Normal, DoS, Probe, R2L, U2R — CV F1 Score: 0.9990</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚖️</div>
+                <div class="card-title">Class Imbalance Fix</div>
+                <div class="card-desc">compute_class_weight balanced — minority classes improved</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <div class="card-title">Cybersecurity AI</div>
+                <div class="card-desc">Real-time attack detection from 41 network features</div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 25px; text-align: left;">
+            <div class="card-title" style="margin-bottom: 12px;">🔗 API Endpoints</div>
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <span class="path">/</span>
+                <span class="path-desc">Home page</span>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <span class="path">/model-info</span>
+                <span class="path-desc">Model details & metrics</span>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <span class="path">/predict</span>
+                <span class="path-desc">Classify network traffic</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="/docs" class="btn btn-primary">📖 Swagger UI</a>
+            <a href="/redoc" class="btn btn-secondary">📘 ReDoc</a>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ by <strong style="color:#38bdf8">Mushahid Hussain</strong></p>
+            <p style="margin-top: 5px;">FastAPI + XGBoost + NSL-KDD</p>
+        </div>
+    </div>
+</body>
+</html>
