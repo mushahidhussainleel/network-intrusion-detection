@@ -28,4 +28,4 @@ backend/data/processed/
 Thumbs.db
 
 # Streamlit
-.streamlit/secrets.toml
+.streamlit/secrets.tomlcd
